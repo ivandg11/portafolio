@@ -499,3 +499,20 @@ button:hover .play {
     border-color: transparent;
   }
 }
+/* ===== AJUSTE PARA CELULARES ===== */
+@media (max-width: 480px) {
+  button {
+    width: 180px;
+    height: 70px;
+    font-size: 20px;
+    gap: 12px;
+    padding: 15px 20px;
+  }
+
+  button svg {
+    width: 45px;
+    height: 45px;
+    margin-right: 0;
+    padding: 0;
+  }
+}
