@@ -7,7 +7,7 @@
 
 body {
   height: 100vh;
-  background: #0f172a;
+  background: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,8 +31,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 0 10px;
+  gap: 14px;
+  padding: 12 25px;
   color: white;
   text-shadow: 2px 2px rgb(116, 116, 116);
   text-transform: uppercase;
@@ -40,7 +40,7 @@ button {
   border: solid 2px black;
   letter-spacing: 1px;
   font-weight: 600;
-  font-size: 17px;
+  font-size: 20px;
   background-color: hsl(49deg 98% 60%);
   border-radius: 50px;
   position: relative;
@@ -92,7 +92,7 @@ button:hover .play {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: radial-gradient(circle at bottom, #0d1b2a, #000814);
+  background: #000000;
   overflow: hidden;
   display: none;
   justify-content: center;
@@ -453,5 +453,39 @@ button:hover .play {
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+.among-img {
+  width: 120px; /* Ajusta si lo quieres más grande o pequeño */
+}
+.loading-text {
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: monospace;
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  width: 0;
+  animation:
+    typing 1.5s steps(22) forwards,
+    blink 0.8s infinite;
+}
+
+/* Animación escritura */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 22ch;
+  }
+}
+
+/* Cursor parpadeando */
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
