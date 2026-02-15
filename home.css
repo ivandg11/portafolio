@@ -479,8 +479,8 @@ button:hover .play {
   border-right: 3px solid white;
   width: 0;
   animation:
-    typing 1.5s steps(22) forwards,
-    blink 0.8s infinite;
+    typing 1s steps(22) forwards,
+    blink 0.9s infinite;
 }
 
 /* Animación escritura */
@@ -489,7 +489,7 @@ button:hover .play {
     width: 0;
   }
   to {
-    width: 22ch;
+    width: 10ch;
   }
 }
 
