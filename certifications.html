@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional certifications earned by Ivan Dominguez."
+    />
+    <title>Certifications | Ivan Dominguez</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html#inicio">Home</a></li>
+        <li><a href="home.html#about">About</a></li>
+        <li><a href="home.html#portfolio">Projects</a></li>
+        <li><a href="home.html#skills">Skills</a></li>
+        <li><a class="active" href="certifications.html">Certifications</a></li>
+        <li><a href="home.html#contacto">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="certifications-page">
+      <section
+        class="certifications-section"
+        aria-labelledby="certifications-title"
+      >
+        <p class="section-kicker">CREDENTIALS</p>
+        <h1 id="certifications-title">Certifications</h1>
+        <p class="certifications-intro">
+          A collection of verified AWS learning credentials. Open any card to
+          view its verification on Credly.
+        </p>
+
+        <div class="badges-grid">
+          <!-- Replace each href with the unique verification URL from your Credly profile. -->
+          <article class="badge-card">
+            <div class="badge-emblem" aria-hidden="true"><span>AWS</span></div>
+            <div class="badge-content">
+              <p class="badge-provider">Amazon Web Services</p>
+              <h2>AWS Technical Essentials</h2>
+              <a
+                class="verification-link"
+                href="https://www.credly.com/"
+                target="_blank"
+                rel="noopener"
+              >
+                Verify credential <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="badge-card">
+            <div class="badge-emblem" aria-hidden="true"><span>AWS</span></div>
+            <div class="badge-content">
+              <p class="badge-provider">Amazon Web Services</p>
+              <h2>AWS Cloud Practitioner Essentials</h2>
+              <a
+                class="verification-link"
+                href="https://www.credly.com/"
+                target="_blank"
+                rel="noopener"
+              >
+                Verify credential <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>&copy; 2026 Ivan Dominguez. All rights reserved.</footer>
+
+    <script>
+      const canvas = document.getElementById('particles');
+      const ctx = canvas.getContext('2d');
+      let particlesArray = [];
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2 + 1;
+          this.speedX = Math.random() * 0.5 - 0.25;
+          this.speedY = Math.random() * 0.5 - 0.25;
+        }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+          if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+        }
+        draw() {
+          ctx.fillStyle = '#ffffff';
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      function init() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        particlesArray = Array.from({ length: 120 }, () => new Particle());
+      }
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particlesArray.forEach((particle) => {
+          particle.update();
+          particle.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+      window.addEventListener('resize', init);
+      init();
+      animate();
+    </script>
+  </body>
+</html>

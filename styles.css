@@ -89,6 +89,10 @@ body {
   width: 100%;
 }
 
+.navbar a.active::after {
+  width: 100%;
+}
+
 /* ================= HERO ================= */
 
 .hero {
@@ -154,6 +158,146 @@ h2 {
   font-size: 32px;
   border-left: 5px solid #15ff00;
   padding-left: 15px;
+}
+
+/* ================= CERTIFICATIONS ================= */
+
+.certifications-page {
+  min-height: calc(100vh - 90px);
+}
+
+.certifications-section {
+  padding: 85px 10% 100px;
+}
+
+.section-kicker {
+  color: #15ff00;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 14px;
+}
+
+.certifications-section h1 {
+  border-left: 5px solid #15ff00;
+  font-size: 42px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+
+.certifications-intro {
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 46px;
+  max-width: 650px;
+}
+
+.certifications-home {
+  margin-top: 85px;
+}
+
+.certifications-home h3 {
+  border-left: 5px solid #15ff00;
+  font-size: 28px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+
+.badges-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.badge-card {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 330px;
+  overflow: hidden;
+  padding: 30px 24px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.badge-card:hover {
+  transform: translateY(-4px);
+}
+
+.image-badge-card {
+  justify-content: space-between;
+}
+
+.credential-badge {
+  display: block;
+  height: auto;
+  max-width: min(100%, 252px);
+  object-fit: contain;
+  width: 100%;
+}
+
+.badge-emblem {
+  align-items: center;
+  background: radial-gradient(circle at 35% 30%, #3d4650, #111820 58%, #030405);
+  border: 3px solid #ff9900;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(255, 153, 0, 0.12), inset 0 0 22px rgba(255, 255, 255, 0.14);
+  display: flex;
+  height: 125px;
+  justify-content: center;
+  margin-bottom: 28px;
+  width: 125px;
+}
+
+.badge-emblem span {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.badge-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.badge-provider {
+  color: #ff9900;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.badge-card h2 {
+  border: 0;
+  font-size: 20px;
+  line-height: 1.35;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.verification-link {
+  align-self: center;
+  border: 1px solid #15ff00;
+  border-radius: 6px;
+  color: #15ff00;
+  font-weight: 700;
+  margin-top: auto;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.verification-link:hover {
+  background: #15ff00;
+  box-shadow: 0 8px 22px rgba(21, 255, 0, 0.28);
+  color: #000000;
 }
 
 /* ================= ABOUT ME ================= */
@@ -430,5 +574,29 @@ h2 {
 
   .card {
     width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    padding-top: 120px;
+  }
+
+  .navbar {
+    padding: 14px 5%;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 14px 20px;
+    justify-content: center;
+  }
+
+  .certifications-section {
+    padding: 55px 7% 75px;
+  }
+
+  .certifications-section h1 {
+    font-size: 34px;
   }
 }
