@@ -236,9 +236,13 @@ h2 {
 .credential-badge {
   display: block;
   height: auto;
-  max-width: min(100%, 252px);
   object-fit: contain;
-  width: 100%;
+  width: min(250px, 100%);
+}
+
+/* AI has less transparent padding than the Cloud Quest reference badge. */
+.ai-practitioner-badge {
+  transform: scale(0.86);
 }
 
 .badge-emblem {
