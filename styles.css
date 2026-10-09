@@ -257,12 +257,16 @@ h2 {
 }
 
 /* Keep the square Claude badge aligned with the AWS credential images. */
-.image-badge-card img[src="claude.jpg"] {
+.image-badge-card img[src='claude.jpg'] {
   height: 220px;
   object-fit: contain;
   width: min(250px, 100%);
 }
-
+.image-badge-card img[src='claude3.jpg'] {
+  height: 220px;
+  object-fit: contain;
+  width: min(250px, 100%);
+}
 /* AI has less transparent padding than the Cloud Quest reference badge. */
 .ai-practitioner-badge {
   transform: scale(0.86);
@@ -273,7 +277,9 @@ h2 {
   background: radial-gradient(circle at 35% 30%, #3d4650, #111820 58%, #030405);
   border: 3px solid #ff9900;
   border-radius: 50%;
-  box-shadow: 0 0 0 8px rgba(255, 153, 0, 0.12), inset 0 0 22px rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 0 0 8px rgba(255, 153, 0, 0.12),
+    inset 0 0 22px rgba(255, 255, 255, 0.14);
   display: flex;
   height: 125px;
   justify-content: center;
@@ -452,7 +458,10 @@ h2 {
   border-left: 3px solid #15ff00;
   border-radius: 10px;
   background: rgba(15, 15, 15, 0.82);
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .skill-category:hover {
@@ -596,8 +605,8 @@ h2 {
   }
 }
 
-.image-badge-card img[src="claude.jpg"],
-.image-badge-card img[src="claude2.jpg"] {
+.image-badge-card img[src='claude.jpg'],
+.image-badge-card img[src='claude2.jpg'] {
   height: 220px;
   object-fit: contain;
   width: min(250px, 100%);
