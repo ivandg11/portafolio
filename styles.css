@@ -639,3 +639,10 @@ h2 {
     font-size: 34px;
   }
 }
+
+.image-badge-card img[src="claude.jpg"],
+.image-badge-card img[src="claude2.jpg"] {
+  height: 220px;
+  object-fit: contain;
+  width: min(250px, 100%);
+}
